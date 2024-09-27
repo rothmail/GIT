@@ -29,7 +29,7 @@ function menuPrincipal(): void {
                     console.log(`${i} - ${bancoBranch[i].nome}`)
                 }
                 let escolha = rl.questionInt(`Escolha uma Branch: `) 
-                let tipo = rl.questionInt('Qual o tipo da branch?\n 1) brach master \n 2) BranchDevelop \n 3) BranchHotfix \n 4) BranchFeature \n 5) BranchRelease \n 6) brach\n')
+                let tipo = rl.questionInt('Qual o tipo da branch?\n 1) branch master \n 2) BranchDevelop \n 3) BranchHotfix \n 4) BranchFeature \n 5) BranchRelease \n 6) Branch\n')
 
                 switch(tipo){
                     case 1:
@@ -52,8 +52,6 @@ function menuPrincipal(): void {
                     default:
                         console.log("opcao invalida ")
                 }
-                
-
 
                 break
             case 0:
@@ -98,8 +96,7 @@ function menuBranch(Branch: Branch): void {
                 Branch.checkout()
                 
                 break
-            case 4: 
-
+            case 4:
                 Branch.mostrarHistorico()
                 break
             case 0:
@@ -420,7 +417,7 @@ function menuCriar(): void {
                 newBranchDevelop.dataCriacao = dataCriacaoDevelop
                 bancoBranch.push(newBranchDevelop)
                 break
-            case 4:
+            case 5:
                 let newBranchFeature = new BranchFeature('', '')
                 let nomeFeature = rl.question('Nome do Branch: ')
                 let dataCriacaoFeature = rl.question('Data de criacao da Branch: ')
